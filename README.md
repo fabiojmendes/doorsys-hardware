@@ -17,6 +17,8 @@ This board design is based on the reference implementation provided by the
 esp32-c3 wroom module [datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c3-wroom-02_datasheet_en.pdf)
 .
 
+![Schematics](./assets/schematic.png)
+
 ### Important remarks
 
 - A DCDC regulator is used to drop the voltage from 12v used by the door lock to
@@ -26,8 +28,12 @@ esp32-c3 wroom module [datasheet](https://www.espressif.com/sites/default/files/
 - GPIO 4 and 5 are connected D0 and D1 respectively hey on the keypad
 - GPIO 10 is connected to the relay for door activation
 - Headers for the uart and usb ports are available
+- Extra gpios are available on optional header pins
 
-![Schematics](./assets/schematic.png)
+> [!WARNING]
+> Spec wise the esp32 is not 5v logic tolerant. But there's lots of [chatter](https://www.letscontrolit.com/forum/viewtopic.php?t=8845)
+> on the internet claiming otherwise. I've been using 5v straight to the gpio
+> pins to connect the wiegand keypad for a while without issues but caveat emptor
 
 ## PCB
 
