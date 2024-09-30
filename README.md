@@ -5,7 +5,7 @@
 This repo contains the designs for the custom PCB for the doorsys device.
 
 Earlier versions of this project used a esp32 relay board and a soldered
-protoboard. That wasn't very clean as you can see in the [pictures](#pictures)
+protoboard. That wasn't very clean as you can see in the [pictures](#pictures).
 
 ## Schematics
 
@@ -31,8 +31,8 @@ esp32-c3 wroom module [datasheet](https://www.espressif.com/sites/default/files/
 - Extra gpios are available on optional header pins
 
 > [!WARNING]
-> Spec wise the esp32 is not 5v logic tolerant. But there's lots of [chatter](https://www.letscontrolit.com/forum/viewtopic.php?t=8845)
-> on the internet claiming otherwise. I've been using 5v straight to the gpio
+> Spec wise the esp32 family is not 5v logic tolerant. But there's lots of [chatter](https://www.letscontrolit.com/forum/viewtopic.php?t=8845)
+> on the internet claiming otherwise though. I've been using 5v straight to the gpio
 > pins to connect the wiegand keypad for a while without issues but caveat emptor
 
 ## PCB
@@ -43,3 +43,12 @@ Here is the PCB design
 ![PCB Bottom](./assets/pcb-bottom.png)
 
 ## Pictures
+
+Prototype board using esp32
+![Prototype](./assets/prototype.jpg)
+
+PCB fully assembled
+![Doorsys](./assets/doorsys-assembled.jpg)
+
+New PCB installed and running
+![Doorsys](./assets/installed.jpg)
