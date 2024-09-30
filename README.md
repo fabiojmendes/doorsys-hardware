@@ -47,7 +47,7 @@ Here is the PCB design
 Prototype board using esp32
 ![Prototype](./assets/prototype.jpg)
 
-PCB fully assembled
+PCB fully assembled and migrated to esp32-c3
 ![Doorsys](./assets/doorsys-assembled.jpg)
 
 New PCB installed and running
