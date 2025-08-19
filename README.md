@@ -1,9 +1,9 @@
 <!-- vim: set tw=80: -->
 
-# Doorsys Hardware
+# Doorsys hardware
 
-This repo contains schematics, hardware breakdown, and designs for the custom
-PCB for the Doorsys device.
+This repository contains schematics, hardware breakdown, and designs for the
+custom PCB for the Doorsys device.
 
 Earlier versions of this project used a ESP32 relay board and a soldered
 protoboard. That wasn't very clean as you can see in the [pictures](#pictures)
@@ -40,7 +40,7 @@ ESP32-C3 WROOM module
   to the 3v3 used by the esp chip
 - The onboard relay is driven by a transistor and contains flyback diodes to
   manage the voltage spikes coming from the lock
-- GPIO 4 and 5 are connected D0 and D1 respectively hey on the keypad
+- GPIO 4 and 5 are connected D0 and D1 respectively on the keypad
 - GPIO 10 is connected to the relay for door activation
 - Headers for the UART and USB ports are available
 - Extra GPIOs are available on optional header pins
@@ -52,9 +52,9 @@ ESP32-C3 WROOM module
 > pins to connect the wiegand keypad for a while without issues but caveat
 > emptor.
 
-## PCB
+## Printed circuit board
 
-Here is the PCB design
+Here is the PCB design:
 
 ![PCB Top](./assets/pcb-top.png) ![PCB Bottom](./assets/pcb-bottom.png)
 
