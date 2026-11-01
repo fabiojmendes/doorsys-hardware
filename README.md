@@ -52,6 +52,20 @@ ESP32-C3 WROOM module
 > pins to connect the wiegand keypad for a while without issues but caveat
 > emptor.
 
+## TODO
+
+List of recommended changes for the next revision of the board:
+
+- Change mounting holes to M3
+- Add level shifting circuit to wiegand reader
+- Add pull-up resistors to wiegand reader
+- Add TVS diodes to wiegand reader and USB
+- Add USB-C connector
+- Remove RJ45 connector and use JST-XH instead
+- Add 3 pin connector for door activation using NC and NO pins
+- Move door connector away from the rest of the circuit
+- Remove button and sensor pins and move it to general IO pins
+
 ## Printed circuit board
 
 Here is the PCB design:
