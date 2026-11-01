@@ -65,6 +65,7 @@ List of recommended changes for the next revision of the board:
 - Add 3 pin connector for door activation using NC and NO pins
 - Move door connector away from the rest of the circuit
 - Remove button and sensor pins and move it to general IO pins
+- Consider adding a LDO (Diodes Inc. AP2112K-3.3TRG1) to the power supply design
 
 ## Printed circuit board
 
