@@ -63,6 +63,7 @@ List of recommended changes for the next revision of the board:
 - Add USB-C connector
 - Remove RJ45 connector and use JST-XH instead
 - Add 3 pin connector for door activation using NC and NO pins
+  - Also increase pad sizes
 - Move door connector away from the rest of the circuit
 - Remove button and sensor pins and move it to general IO pins
 - Consider adding a LDO (Diodes Inc. AP2112K-3.3TRG1) to the power supply design
