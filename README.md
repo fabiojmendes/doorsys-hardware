@@ -103,7 +103,7 @@ plug on the board side (`J1`) and a 6-pin JST-SM connector on the keypad side:
    data, `Blue` for signal), while the striped mate wires (`White/Blue`,
    `White/Orange`, `White/Green`) are left disconnected.
 2. **Inline voltage level translation:** Two reverse-biased Schottky diodes
-   (`1N5819` or equivalent) are soldered inline on the `D0` (`Green`) and `D1`
+   (`1N5817` or equivalent) are soldered inline on the `D0` (`Green`) and `D1`
    (`Orange`) lines before the JST-SM connector. This drops/blocks the keypad's
    5V logic level down to a safe level for the ESP32-C3 GPIOs without having to
    cut traces on the PCB.
@@ -118,16 +118,16 @@ The RJ45 plug uses a **custom crimp order** (modified from T568B) so the
 reassigned Cat6 wires land on the existing PCB pins of `J1`. JST-SM pins are
 numbered `1` to `6` from left to right with the locking latch facing up:
 
-| RJ45 Pin | PCB Net (`J1`) | ESP32-C3 Pin | Cat6 Wire Color | Original T568B |   Inline Component   | JST-SM Pin (L->R) | Keypad Wire                          |
-| :------: | :------------- | :----------- | :-------------- | :------------- | :------------------: | :---------------: | :----------------------------------- |
-|  **1**   | `sen_pin`      | GPIO 0       | White/Orange    | White/Orange   |          —           |         —         | _Unused (NC)_                        |
-|  **2**   | `sg_pin`       | GPIO 7       | **Blue**        | Orange         |   Jumped (1-to-2)    |      **4 & 5**    | **Blue** (LED) + **Yellow** (Buzzer) |
-|  **3**   | `d1_pin`       | GPIO 5       | **Orange**      | White/Green    | `<\|` Schottky diode |       **2**       | **White** (Wiegand `D1`)             |
-|  **4**   | `GND`          | GND          | White/Green     | Blue           |          —           |         —         | _Unused (NC)_                        |
-|  **5**   | `bt_pin`       | GPIO 6       | White/Blue      | White/Blue     |          —           |         —         | _Unused (NC)_                        |
-|  **6**   | `d0_pin`       | GPIO 4       | **Green**       | Green          | `<\|` Schottky diode |       **3**       | **Green** (Wiegand `D0`)             |
-|  **7**   | `GND`          | GND          | **White/Brown** | White/Brown    |          —           |       **6**       | **Black** (`GND`)                    |
-|  **8**   | `+12V`         | —            | **Brown**       | Brown          |          —           |       **1**       | **Red** (`+12V`)                     |
+| RJ45 Pin | PCB Net (`J1`) | ESP32-C3 Pin | Cat6 Wire Color | Original T568B | Inline Component | JST-SM Pin (L->R) | Keypad Wire                          |
+| :------: | :------------- | :----------- | :-------------- | :------------- | :--------------: | :---------------: | :----------------------------------- |
+|  **1**   | `sen_pin`      | GPIO 0       | White/Orange    | White/Orange   |        —         |         —         | _Unused (NC)_                        |
+|  **2**   | `sg_pin`       | GPIO 7       | **Blue**        | Orange         | Jumped (1-to-2)  |     **4 & 5**     | **Blue** (LED) + **Yellow** (Buzzer) |
+|  **3**   | `d1_pin`       | GPIO 5       | **Orange**      | White/Green    |  Schottky diode  |       **2**       | **White** (Wiegand `D1`)             |
+|  **4**   | `GND`          | GND          | White/Green     | Blue           |        —         |         —         | _Unused (NC)_                        |
+|  **5**   | `bt_pin`       | GPIO 6       | White/Blue      | White/Blue     |        —         |         —         | _Unused (NC)_                        |
+|  **6**   | `d0_pin`       | GPIO 4       | **Green**       | Green          |  Schottky diode  |       **3**       | **Green** (Wiegand `D0`)             |
+|  **7**   | `GND`          | GND          | **White/Brown** | White/Brown    |        —         |       **6**       | **Black** (`GND`)                    |
+|  **8**   | `+12V`         | —            | **Brown**       | Brown          |        —         |       **1**       | **Red** (`+12V`)                     |
 
 ## TODO
 
