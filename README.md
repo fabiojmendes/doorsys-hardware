@@ -57,39 +57,7 @@ ESP32-C3 WROOM module
 The keypad connects to the PCB via a custom Cat6 cable terminated with an RJ45
 plug on the board side (`J1`) and a 6-pin JST-SM connector on the keypad side:
 
-```text
-  PCB (J1)                                                          Keypad
-  RJ45 (8P8C)                 Cat6 Cable                          JST-SM (6-pin)
-                                                                (Latch up, L -> R)
-+--------------+                                                +----------------+
-| 1  sen_pin   |--- White/Orange (NC)                           |                |
-|              |                                         +----->| 1  Red   (12V) |
-| 2  sg_pin    |--- Blue -------------------+            |      |                |
-|              |                            |     +------|-<|-->| 2  White (D1)  |
-| 3  d1_pin    |--- Orange -----------------|-----+      |      |                |
-|              |                            |            |      |                |
-| 4  GND       |--- White/Green  (NC)       |     +------|-<|-->| 3  Green (D0)  |
-| 5  bt_pin    |--- White/Blue   (NC)       |     |      |      |                |
-|              |                            |     |      |   +->| 4  Blue  (LED) |
-| 6  d0_pin    |--- Green ------------------|-----+      |   |  |                |
-|              |                            +------------|---+->| 5  Yel   (Buz) |
-| 7  GND       |--- White/Brown -------------------------|----->| 6  Black (GND) |
-|              |                                         |      |                |
-| 8  +12V      |--- Brown -------------------------------+      +----------------+
-+--------------+
-
-                JST-SM Pinout (Latch facing up, counting L -> R)
-                                   +-------+
-                                   | Latch |
-                      +------------+-------+------------+
-                      | [1]   [2]   [3]   [4]   [5]   [6] |
-                      +-----------------------------------+
-                         |     |     |     |     |     |
-                        Red  White Green Blue   Yel  Black
-                       (12V)  (D1)  (D0) (LED) (Buz) (GND)
-                                          \___/
-                                          Jumped
-```
+![Reader Cable Schematic](./assets/reader-cable.svg)
 
 ### Design changes
 
